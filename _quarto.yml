@@ -1,0 +1,28 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  page-navigation: true
+  title: "Zero to Quarto Workshop"
+
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+        
+      - href: setup.qmd  
+        text: Set up
+        
+      - href: slides.qmd
+        text: Slides
+        
+    right: 
+      - icon: github
+        href: https://github.com/andreaczhang/workshop-02quarto
+        
+format:
+  html:
+    theme: sandstone
+    css: styles.css
+    toc: true

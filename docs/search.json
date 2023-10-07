@@ -1,0 +1,93 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Zero to Quarto Workshop",
+    "section": "",
+    "text": "Date: Monday 23 October 2023, 6:30PM to 8:00PM, CEST\nPlace: KO2-F-153, Rämistrasse 71, Zürich.\nEvent link\n\n\nWelcome!\nQuarto is one of the most discussed topics in the R community for the past year. In the posit conf 2023 that just happened a few weeks ago, there were 23 (!) talks on this open-source publishing system. You can build a personal or organisation website; a course or workshop website; a blog; a scientific report; a presentation; all with the possibility to display and execute code (R, Python, Julia), and for free.\nIf you:\n\ndon’t know what quarto is yet, and want to find out more\nheard of quarto somewhere, but don’t know where to start\nare an expert in quarto and want to share your experience\n\nthen this workshop is for you!\n\nPre-requisites & technical setup\nNo prior quarto experience is needed.\nGood to know:\n\nsome markdown\nsome git\nsome r\n\nPlease check out this page for how to set up your laptop and GitHub.\n\n\nPlan for today\n\n\n\nTime\nTopic\n\n\n\n\n18:00 - 18:30\nSet up your laptop\n\n\n18:30 - 18:40\nWelcome and ice-breaker questions\n\n\n18:45 - 19:30\nWorkshop\n\n\n19:30 onwards\nSocializing"
+  },
+  {
+    "objectID": "misc/Internal_notes.html",
+    "href": "misc/Internal_notes.html",
+    "title": "Notes used for the preparation",
+    "section": "",
+    "text": "Notes used for the preparation\nMinimal requirement for a website to render:\n\n_quarto.yml\nindex.qmd\n\nGood to have: styles.css\n\n\nFancier stuff\n\nembed webr\nembed revealjs"
+  },
+  {
+    "objectID": "misc/Abstract.html",
+    "href": "misc/Abstract.html",
+    "title": "Zero to Quarto Workshop",
+    "section": "",
+    "text": "Quarto is one of the most discussed topics in the R community for the past year. In the posit conf 2023 just happened a few weeks ago, there were 23 (!) talks on this open-source publishing system. You can build a personal or organisation website; a course or workshop website; a blog; a scientific report; a presentation; all with the possibility to display and execute code (R, Python, Julia), and for free.\nIf you:\n\ndon’t know what quarto is yet, and want to find out more;\nheard of quarto somewhere, but don’t know where to start (like me at the beginning);\nare an expert in quarto and want to share your experience\n\nPlease join us!"
+  },
+  {
+    "objectID": "misc/Abstract.html#zero-to-quarto-build-your-first-quarto-website",
+    "href": "misc/Abstract.html#zero-to-quarto-build-your-first-quarto-website",
+    "title": "Zero to Quarto Workshop",
+    "section": "",
+    "text": "Quarto is one of the most discussed topics in the R community for the past year. In the posit conf 2023 just happened a few weeks ago, there were 23 (!) talks on this open-source publishing system. You can build a personal or organisation website; a course or workshop website; a blog; a scientific report; a presentation; all with the possibility to display and execute code (R, Python, Julia), and for free.\nIf you:\n\ndon’t know what quarto is yet, and want to find out more;\nheard of quarto somewhere, but don’t know where to start (like me at the beginning);\nare an expert in quarto and want to share your experience\n\nPlease join us!"
+  },
+  {
+    "objectID": "misc/Abstract.html#bio",
+    "href": "misc/Abstract.html#bio",
+    "title": "Zero to Quarto Workshop",
+    "section": "Bio",
+    "text": "Bio\nChi (personal website) is an R programmer and part-time lecturer at the medical faculty, University of Oslo, Norway. She is a biostatistician by training, and has become more interested in building R packages and quarto websites. Chi uses quarto websites for her personal portfolio, collaborative documentation as well as courses/workshops she teaches, and is constantly fascinated by what quarto can do!"
+  },
+  {
+    "objectID": "misc/Plan.html",
+    "href": "misc/Plan.html",
+    "title": "Zero to Quarto Workshop",
+    "section": "",
+    "text": "Github, R project and clone to local"
+  },
+  {
+    "objectID": "misc/Plan.html#setup",
+    "href": "misc/Plan.html#setup",
+    "title": "Zero to Quarto Workshop",
+    "section": "",
+    "text": "Github, R project and clone to local"
+  },
+  {
+    "objectID": "misc/Plan.html#time-schedule",
+    "href": "misc/Plan.html#time-schedule",
+    "title": "Zero to Quarto Workshop",
+    "section": "Time schedule",
+    "text": "Time schedule\n15 min intro\nShow example\n\nCreate something, render locally\nPractice\n\njuggle the navbar\n\n\n\nGithub pages configure\nPractice\n\n\nAdd a new page\nPractice\n\n\nInclude data and code\nPractice\n### Some advanced material? New functions"
+  },
+  {
+    "objectID": "misc/Plan.html#preparation",
+    "href": "misc/Plan.html#preparation",
+    "title": "Zero to Quarto Workshop",
+    "section": "Preparation",
+    "text": "Preparation\nSlide can be made in quarto?"
+  },
+  {
+    "objectID": "misc/Plan.html#other-things",
+    "href": "misc/Plan.html#other-things",
+    "title": "Zero to Quarto Workshop",
+    "section": "Other things",
+    "text": "Other things\nResources\nhttps://albert-rapp.de/posts/13_quarto_blog_writing_guide/13_quarto_blog_writing_guide"
+  },
+  {
+    "objectID": "setup.html",
+    "href": "setup.html",
+    "title": "Technical setup",
+    "section": "",
+    "text": "Here are a few things you need to build and deploy a quarto website (or project) with GitHub Pages.\n\nR, Rstudio\n\nCheck your R version and Rstudio version.\n\nhow to check version\n\n\nGitHub\n\nSet up a free account at GitHub if you do not have an account yet.\nConfigure, and link with Rstudio.\n\nSome might need help at this stage\n\n\nQuarto\nDownload and install\nhow to check version\nwhere to download, how to know if it’s successful"
+  },
+  {
+    "objectID": "slides.html",
+    "href": "slides.html",
+    "title": "Slide",
+    "section": "",
+    "text": "This could be interesting to use revealjs embedding\n\nStructure\n45 min, 5-6 practices with explanation should suffice\n\n\n\nPage\nTopic\n\n\n\n\n1-x\nIntroduction\n\n\n\nStart a new project\n\n\n\nBuild a minimal website and render\n\n\n\nAdd content: about page\n\n\n\nDeploy to GitHub\n\n\n\nAdd content: a new page with R code and data\n\n\n\nAdd content: image\n\n\n\nAdvanced content will be given links, left for free exploration!"
+  },
+  {
+    "objectID": "index.html#plan-for-today",
+    "href": "index.html#plan-for-today",
+    "title": "Zero to Quarto Workshop",
+    "section": "Plan for today",
+    "text": "Plan for today\n\n\n\nTime\nTopic\n\n\n\n\n18:00 - 18:30\nSet up your laptop\n\n\n18:30 - 18:40\nWelcome and ice-breaker questions\n\n\n18:45 - 19:30\nWorkshop\n\n\n19:30 onwards\nSocializing"
+  }
+]

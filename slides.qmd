@@ -1,0 +1,23 @@
+---
+title: "Slide"
+format: html
+---
+
+
+This could be interesting to use revealjs embedding
+
+### Structure
+
+<span style='color:tomato'>45 min, 5-6 practices with explanation should suffice</span>
+
+|     Page       |           Topic                |
+|:----------------:|:------------------------------:|
+|  1-x   |  Introduction |
+|     | Start a new project  |
+|     | Build a minimal website and render |
+|     | Add content: `about` page |
+|     | Deploy to GitHub |
+|     | Add content: a new page with R code and data |
+|     | Add content: image  |
+
+Advanced content will be given links, left for free exploration!

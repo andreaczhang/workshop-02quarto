@@ -12,6 +12,9 @@ Show example
 
 Practice
 
+* juggle the navbar
+
+
 ### Github pages configure
 
 Practice
@@ -31,3 +34,14 @@ Practice
 Slide can be made in quarto?
 
 ## Other things
+
+
+
+
+
+
+
+Resources 
+
+https://albert-rapp.de/posts/13_quarto_blog_writing_guide/13_quarto_blog_writing_guide
+

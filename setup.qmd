@@ -1,0 +1,35 @@
+---
+title: "Technical setup"
+author: "Chi Zhang"
+date: 2023-10-07
+format: 
+  html:
+    toc: true
+    toc-depth: 2
+---
+
+Here are a few things you need to build and deploy a quarto website (or project) with GitHub Pages.
+
+### R, Rstudio 
+
+1. Check your R version and Rstudio version. 
+
+<span style='color:tomato'>how to check version</span>
+
+
+### GitHub
+
+1. Set up a free account at [GitHub](https://github.com) if you do not have an account yet.
+2. Configure, and link with Rstudio.
+
+<span style='color:tomato'>Some might need help at this stage</span>
+
+
+### Quarto
+
+Download and install 
+
+<span style='color:tomato'>how to check version</span>
+
+<span style='color:tomato'>where to download, how to know if it's successful</span>
+
