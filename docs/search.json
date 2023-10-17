@@ -79,9 +79,9 @@
   {
     "objectID": "slides.html",
     "href": "slides.html",
-    "title": "Slide",
+    "title": "Slides",
     "section": "",
-    "text": "This could be interesting to use revealjs embedding\n\nStructure\n45 min, 5-6 practices with explanation should suffice\n\n\n\nPage\nTopic\n\n\n\n\n1-x\nIntroduction\n\n\n\nStart a new project\n\n\n\nBuild a minimal website and render\n\n\n\nAdd content: about page\n\n\n\nDeploy to GitHub\n\n\n\nAdd content: a new page with R code and data\n\n\n\nAdd content: image\n\n\n\nAdvanced content will be given links, left for free exploration!"
+    "text": "This could be interesting to use revealjs embedding\n\n\n\nStructure\n\n\n\nPage\nTopic\n\n\n\n\n1-x\nIntroduction\n\n\n\nStart a new project\n\n\n\nBuild a minimal website and render\n\n\n\nAdd content: about page\n\n\n\nDeploy to GitHub\n\n\n\nAdd content: a new page with R code and data\n\n\n\nAdd content: image\n\n\n\nAdvanced content will be given links, left for free exploration!"
   },
   {
     "objectID": "index.html#plan-for-today",
@@ -89,5 +89,82 @@
     "title": "Zero to Quarto Workshop",
     "section": "Plan for today",
     "text": "Plan for today\n\n\n\nTime\nTopic\n\n\n\n\n18:00 - 18:30\nSet up your laptop\n\n\n18:30 - 18:40\nWelcome and ice-breaker questions\n\n\n18:45 - 19:30\nWorkshop\n\n\n19:30 onwards\nSocializing"
+  },
+  {
+    "objectID": "tutorial.html",
+    "href": "tutorial.html",
+    "title": "Tutorial: a step-by-step walkthrough",
+    "section": "",
+    "text": "This tutorial outlines a minimal workflow so that you can build your own quarto website. For a more complete guide, please refer to the official quarto documentation."
+  },
+  {
+    "objectID": "tutorial.html#set-up-a-version-controlled-quarto-project",
+    "href": "tutorial.html#set-up-a-version-controlled-quarto-project",
+    "title": "Tutorial: a step-by-step walkthrough",
+    "section": "1. Set up a version controlled quarto project",
+    "text": "1. Set up a version controlled quarto project\nThis can be broken down into a few steps:\n\n1.1 Create a new public repository\nIt has to be public.\n\n\n1.2 Link your R project to the repository\nOpen\n\n\n\n\n\n\nHow do you know the repository is correctly set up?\n\n\n\n\n\nYou can try to modify the README.md locally, then commit and push to remote (online repository). Refresh the webpage, if you see the remote repository is synced, that means the version control works fine."
+  },
+  {
+    "objectID": "tutorial.html#render",
+    "href": "tutorial.html#render",
+    "title": "Tutorial: a step-by-step walkthrough",
+    "section": "Render",
+    "text": "Render"
+  },
+  {
+    "objectID": "tutorial.html#this-workflow-requires-1",
+    "href": "tutorial.html#this-workflow-requires-1",
+    "title": "Tutorial: a step-by-step walkthrough",
+    "section": "This workflow requires:",
+    "text": "This workflow requires:\n\nGitHub account to set up a public repository\nRstudio (version xxx)\nQuarto (version xxx)\n\n:::"
+  },
+  {
+    "objectID": "tutorial.html#render-the-project",
+    "href": "tutorial.html#render-the-project",
+    "title": "Tutorial: a step-by-step walkthrough",
+    "section": "2. Render the project",
+    "text": "2. Render the project"
+  },
+  {
+    "objectID": "tutorial.html#configure-github-pages",
+    "href": "tutorial.html#configure-github-pages",
+    "title": "Tutorial: a step-by-step walkthrough",
+    "section": "Configure GitHub pages",
+    "text": "Configure GitHub pages"
+  },
+  {
+    "objectID": "tutorial.html#build-the-project",
+    "href": "tutorial.html#build-the-project",
+    "title": "Tutorial: a step-by-step walkthrough",
+    "section": "2. Build the project",
+    "text": "2. Build the project\n\n2.1 Structure of a new quarto project\n### 2.2 Authoring\nTry to write something in the index.qmd file, press Render button, and see what happens.\n\n\n2.3 Configure the quarto project\nIn _quarto.yml, change the project configuration to use docs as the output-dir:\nproject:\n  type: website\n  output-dir: docs\nThen add .nojekyll to the root of the repository. Can do this by (in terminal)\ntouch .nojekyll\nPush everything to your repository."
+  },
+  {
+    "objectID": "tutorial.html#configure-github-pages-test-deployment",
+    "href": "tutorial.html#configure-github-pages-test-deployment",
+    "title": "Tutorial: a step-by-step walkthrough",
+    "section": "3. Configure GitHub pages, test deployment",
+    "text": "3. Configure GitHub pages, test deployment\n\n\n\n\n\n\nTip\n\n\n\nWhen you are more experienced, you can add more content until you’re happy before configuring the GH pages and test the website deployment. I personally prefer to test the deployment early on to make sure it works!\n\n\nGo to Settings &gt; Pages, publish from docs of the main branch.\n\nCan check GitHub Action and deployment status.\n\n\nAfter the deployment is successful, go to view deployment, and a successful website should be published."
+  },
+  {
+    "objectID": "tutorial.html#add-content",
+    "href": "tutorial.html#add-content",
+    "title": "Tutorial: a step-by-step walkthrough",
+    "section": "4. Add content",
+    "text": "4. Add content\nNow this is a big topic. There are so many things you can change; but let’s focus on some basics first.\n\nSite navigation\n\n\nAdd a new page\n\n\nTheme\n\n\nCode chunks\n\n\nImages\n\n\nMore on quarto websites\nUse list"
+  },
+  {
+    "objectID": "tutorial.html#optional-add-interactivity",
+    "href": "tutorial.html#optional-add-interactivity",
+    "title": "Tutorial: a step-by-step walkthrough",
+    "section": "(Optional) Add interactivity",
+    "text": "(Optional) Add interactivity\nThis is a topic of using quarto extension."
+  },
+  {
+    "objectID": "tutorial.html#summary-and-resources",
+    "href": "tutorial.html#summary-and-resources",
+    "title": "Tutorial: a step-by-step walkthrough",
+    "section": "Summary and resources",
+    "text": "Summary and resources\n\nWorkflow\n\n\nOther quarto projects\nPresentation\nBooks\n\n\nResources"
   }
 ]
