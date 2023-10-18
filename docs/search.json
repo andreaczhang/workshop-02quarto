@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Zero to Quarto Workshop",
     "section": "",
-    "text": "Date: Monday 23 October 2023, 6:30PM to 8:00PM, CEST\nPlace: KO2-F-153, Rämistrasse 71, Zürich.\nEvent link\n\n\nWelcome!\nQuarto is one of the most discussed topics in the R community for the past year. In the posit conf 2023 that just happened a few weeks ago, there were 23 (!) talks on this open-source publishing system. You can build a personal or organisation website; a course or workshop website; a blog; a scientific report; a presentation; all with the possibility to display and execute code (R, Python, Julia), and for free.\nIf you:\n\ndon’t know what quarto is yet, and want to find out more\nheard of quarto somewhere, but don’t know where to start\nare an expert in quarto and want to share your experience\n\nthen this workshop is for you!\n\nPre-requisites & technical setup\nNo prior quarto experience is needed.\nGood to know:\n\nsome markdown\nsome git\nsome r\n\nPlease check out this page for how to set up your laptop and GitHub.\n\n\nPlan for today\n\n\n\nTime\nTopic\n\n\n\n\n18:00 - 18:30\nSet up your laptop\n\n\n18:30 - 18:40\nWelcome and ice-breaker questions\n\n\n18:45 - 19:30\nWorkshop\n\n\n19:30 onwards\nSocializing"
+    "text": "Date: Monday 23 October 2023, 6:30PM to 8:00PM, CEST\nPlace: KO2-F-153, Rämistrasse 71, Zürich.\nEvent link\nPresenter: Chi Zhang. Feel free to reach out with comments and feedback!\n\n\nWelcome!\nQuarto is one of the most discussed topics in the R community for the past year. In the posit conf 2023 that just happened a few weeks ago, there were 23 (!) talks on this open-source publishing system. You can build a personal or organisation website; a course or workshop website; a blog; a scientific report; a presentation; all with the possibility to display and execute code (R, Python, Julia), and for free.\nIf you:\n\ndon’t know what quarto is yet, and want to find out more\nheard of quarto somewhere, but don’t know where to start\nare an expert in quarto and want to share your experience\n\nthen this workshop is for you!\n\nPre-requisites & technical setup\nNo prior quarto experience is needed.\nGood to know:\n\nsome markdown\nsome git\nsome r\n\nPlease check out this page for how to set up your laptop and GitHub.\n\n\nPlan for today\n\n\n\nTime\nTopic\n\n\n\n\n18:00 - 18:30\nSet up your laptop\n\n\n18:30 - 18:40\nWelcome and ice-breaker questions\n\n\n18:45 - 19:30\nWorkshop\n\n\n19:30 onwards\nSocializing"
   },
   {
     "objectID": "misc/Internal_notes.html",
@@ -166,5 +166,12 @@
     "title": "Tutorial: a step-by-step walkthrough",
     "section": "Summary and resources",
     "text": "Summary and resources\n\nWorkflow\n\n\nOther quarto projects\nPresentation\nBooks\n\n\nResources"
+  },
+  {
+    "objectID": "index.html#presenter-chi-zhang.-feel-free-to-reach-out-with-comments-and-feedback",
+    "href": "index.html#presenter-chi-zhang.-feel-free-to-reach-out-with-comments-and-feedback",
+    "title": "Zero to Quarto Workshop",
+    "section": "Presenter: Chi Zhang. Feel free to reach out with comments and feedback!",
+    "text": "Presenter: Chi Zhang. Feel free to reach out with comments and feedback!"
   }
 ]

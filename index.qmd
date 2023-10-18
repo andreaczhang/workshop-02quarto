@@ -1,7 +1,11 @@
 ---
 title: "Zero to Quarto Workshop"
 subtitle: "Build your first quarto website (or something other cool things!)"
-format: html
+format: 
+  html:
+    toc: true
+    toc-depth: 2
+    linestretch: 1.7
 ---
 
 Date: Monday 23 October 2023, 6:30PM to 8:00PM, CEST 
@@ -11,6 +15,7 @@ Place: KO2-F-153, Rämistrasse 71, Zürich.
 [Event link](https://www.meetup.com/rladies-zurich/events/296330423/)
 
 Presenter: [Chi Zhang](https://andreaczhang.github.io). Feel free to reach out with comments and feedback!
+
 ------------------
  
 # Welcome!

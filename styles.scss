@@ -1,0 +1,72 @@
+/*-- scss:defaults --*/
+$theme-black: #4c4c4c;
+$theme-white: white;
+$theme-grey: #e9ecef;
+$theme-purple1: #E6E6FA;
+$theme-purple2: #CBC3E3;
+$theme-purple3: #88398A;
+$theme-purple4: #9d709e;
+$theme-purple5: #562457;
+
+
+$body-bg: $theme-white;
+$body-color: $theme-black; // text color
+$headings-color: $theme-purple5; // applies to all 
+$link-color: $theme-purple4;
+
+// code
+$code-color: #88398A;
+$code-bg: $theme-purple1;
+$code-block-bg-alpha: -0.5;
+$code-block-border-left: TRUE;
+$code-block-border-left-style: solid;
+
+// navigation
+$navbar-bg: $theme-purple4;
+
+// callout block
+$callout-color-note: $theme-purple3;
+$callout-color-tip: $theme-purple3;
+
+
+// font
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code_Pro&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Lato&family=Yanone+Kaffeesatz&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+$font-family-sans-serif: 'Poppins', sans-serif;
+$font-family-monospace: 'Source Code Pro', monospace;
+$font-signika-negative: 'Signika Negative', sans-serif;
+$font-poppins: 'Poppins', sans-serif; 
+//$font-family-sans-serif: 'Yanone Kaffeesatz', Tahoma, sans-serif;
+//$font-family-sans-serif: 'Signika Negative';
+
+
+
+
+/*-- scss:rules --*/
+
+h1 {
+  color: $theme-purple5;
+  font-family: $font-signika-negative;
+  font-size: 40px;
+  //padding: 0.2em;
+}
+
+h2 {
+  color: $theme-purple5;
+  font-family: $font-signika-negative;
+  padding: 0.3em;
+}
+
+h3, h4 {
+  color: $theme-purple4;
+  font-family: $font-signika-negative;
+  padding: 0.3em;
+}
