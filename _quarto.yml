@@ -27,5 +27,4 @@ website:
 format:
   html:
     theme: styles.scss
-    # css: styles.css
     toc: true

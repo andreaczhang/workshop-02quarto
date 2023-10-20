@@ -120,13 +120,34 @@ ul.task-list li input[type="checkbox"] {
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
+  <ul>
+  <li><a href="#set-up-a-version-controlled-quarto-project" id="toc-set-up-a-version-controlled-quarto-project" class="nav-link active" data-scroll-target="#set-up-a-version-controlled-quarto-project">1. Set up a version controlled quarto project</a>
   <ul class="collapse">
-  <li><a href="#set-up-a-version-controlled-quarto-project" id="toc-set-up-a-version-controlled-quarto-project" class="nav-link active" data-scroll-target="#set-up-a-version-controlled-quarto-project">1. Set up a version controlled quarto project</a></li>
-  <li><a href="#build-the-project" id="toc-build-the-project" class="nav-link" data-scroll-target="#build-the-project">2. Build the project</a></li>
+  <li><a href="#option-1-clone-the-workshop-template-repository" id="toc-option-1-clone-the-workshop-template-repository" class="nav-link" data-scroll-target="#option-1-clone-the-workshop-template-repository">Option 1: clone the workshop template repository</a></li>
+  <li><a href="#option-2-create-your-own-public-repository" id="toc-option-2-create-your-own-public-repository" class="nav-link" data-scroll-target="#option-2-create-your-own-public-repository">Option 2: create your own public repository</a></li>
+  </ul></li>
+  <li><a href="#build-the-project" id="toc-build-the-project" class="nav-link" data-scroll-target="#build-the-project">2. Build the project</a>
+  <ul class="collapse">
+  <li><a href="#structure-of-a-new-quarto-project" id="toc-structure-of-a-new-quarto-project" class="nav-link" data-scroll-target="#structure-of-a-new-quarto-project">2.1 Structure of a new quarto project</a></li>
+  <li><a href="#authoring" id="toc-authoring" class="nav-link" data-scroll-target="#authoring">2.2 Authoring</a></li>
+  <li><a href="#configure-the-quarto-project" id="toc-configure-the-quarto-project" class="nav-link" data-scroll-target="#configure-the-quarto-project">2.3 Configure the quarto project</a></li>
+  </ul></li>
   <li><a href="#configure-github-pages-test-deployment" id="toc-configure-github-pages-test-deployment" class="nav-link" data-scroll-target="#configure-github-pages-test-deployment">3. Configure GitHub pages, test deployment</a></li>
-  <li><a href="#add-content" id="toc-add-content" class="nav-link" data-scroll-target="#add-content">4. Add content</a></li>
+  <li><a href="#add-content" id="toc-add-content" class="nav-link" data-scroll-target="#add-content">4. Add content</a>
+  <ul class="collapse">
+  <li><a href="#site-navigation-and-new-pages" id="toc-site-navigation-and-new-pages" class="nav-link" data-scroll-target="#site-navigation-and-new-pages">Site navigation and new pages</a></li>
+  <li><a href="#theme" id="toc-theme" class="nav-link" data-scroll-target="#theme">Theme</a></li>
+  <li><a href="#code-chunks" id="toc-code-chunks" class="nav-link" data-scroll-target="#code-chunks">Code chunks</a></li>
+  <li><a href="#images" id="toc-images" class="nav-link" data-scroll-target="#images">Images</a></li>
+  <li><a href="#more-on-quarto-websites" id="toc-more-on-quarto-websites" class="nav-link" data-scroll-target="#more-on-quarto-websites">More on quarto websites</a></li>
+  </ul></li>
   <li><a href="#optional-add-interactivity" id="toc-optional-add-interactivity" class="nav-link" data-scroll-target="#optional-add-interactivity">(Optional) Add interactivity</a></li>
-  <li><a href="#summary-and-resources" id="toc-summary-and-resources" class="nav-link" data-scroll-target="#summary-and-resources">Summary and resources</a></li>
+  <li><a href="#summary-and-resources" id="toc-summary-and-resources" class="nav-link" data-scroll-target="#summary-and-resources">Summary and resources</a>
+  <ul class="collapse">
+  <li><a href="#workflow" id="toc-workflow" class="nav-link" data-scroll-target="#workflow">Workflow</a></li>
+  <li><a href="#other-quarto-projects" id="toc-other-quarto-projects" class="nav-link" data-scroll-target="#other-quarto-projects">Other quarto projects</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -182,14 +203,43 @@ This workflow requires:
 </div>
 <section id="set-up-a-version-controlled-quarto-project" class="level2">
 <h2 class="anchored" data-anchor-id="set-up-a-version-controlled-quarto-project">1. Set up a version controlled quarto project</h2>
-<p>This can be broken down into a few steps:</p>
-<section id="create-a-new-public-repository" class="level3">
-<h3 class="anchored" data-anchor-id="create-a-new-public-repository">1.1 Create a new public repository</h3>
-<p>It has to be public.</p>
+<p>There are a few ways to do this.</p>
+<ul>
+<li><strong>Option 1 is recommended for the workshop today</strong>; it contains a minimal website page with customized color palette;</li>
+<li>Option 2 is for those who are familiar with linking GitHub with RStudio, and want to create their own quarto project. Feel free to explore!</li>
+</ul>
+<section id="option-1-clone-the-workshop-template-repository" class="level3">
+<h3 class="anchored" data-anchor-id="option-1-clone-the-workshop-template-repository">Option 1: clone the workshop template repository</h3>
+<p>Go to the <a href="https://github.com/andreaczhang/template-02quarto">template-02quarto repository</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/0_clone_template.png" class="img-fluid figure-img" style="width:85.0%"></p>
+</figure>
+</div>
+<p>Clone the repository by clicking on <code>Code</code>, copy the link</p>
+<p>In RStudio, open a new project, choose version control</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/1_vc_project_git.png" class="img-fluid figure-img" style="width:65.0%"></p>
+</figure>
+</div>
+<p>Paste the link, and enter a name for your project. Create. This step copies content to your local machine, and inside your Rstudio you should see a tab named Git.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/1_vc_project_clone.png" class="img-fluid figure-img" style="width:65.0%"></p>
+</figure>
+</div>
 </section>
-<section id="link-your-r-project-to-the-repository" class="level3">
-<h3 class="anchored" data-anchor-id="link-your-r-project-to-the-repository">1.2 Link your R project to the repository</h3>
-<p>Open</p>
+<section id="option-2-create-your-own-public-repository" class="level3">
+<h3 class="anchored" data-anchor-id="option-2-create-your-own-public-repository">Option 2: create your own public repository</h3>
+<p>This option is for those who are familiar with using GitHub and version controlled R project, and want to make a quarto website from scratch. (You are welcome to copy the files directly from the template repo into your own)</p>
+<ul>
+<li>Create a new <strong>public</strong> repository</li>
+<li>Clone the repository by clicking on the <code>Code</code></li>
+<li>Open a new project in Rstudio, choose version control</li>
+<li>Paste link, name your repo.</li>
+</ul>
+<p>This will create an empty version controlled Rproject. After this, you can choose to download the files from the template repository directly; or create your own quarto files. (We do not cover this today)</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -210,20 +260,123 @@ How do you know the repository is correctly set up?
 </section>
 <section id="build-the-project" class="level2">
 <h2 class="anchored" data-anchor-id="build-the-project">2. Build the project</h2>
+<p>Now you see a few files that have been downloaded in the folder where you <code>Rproject</code> is located. Before going into more details, let’s build your first webpage to see what happens!</p>
+<p>Locate <code>index.qmd</code>, open it.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/2_index_1.png" class="img-fluid figure-img" style="width:65.0%"></p>
+</figure>
+</div>
+<p>You should have a button <strong>render</strong> when you open the <code>index.qmd</code> file. Click on <strong>render</strong>. Do you see an HTML page in the <em>Viewer</em> panel?</p>
+<p>If you do, that’s great! We’re ready for the next step!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/2_index_2.png" class="img-fluid figure-img" style="width:75.0%"></p>
+</figure>
+</div>
 <section id="structure-of-a-new-quarto-project" class="level3">
 <h3 class="anchored" data-anchor-id="structure-of-a-new-quarto-project">2.1 Structure of a new quarto project</h3>
-<p>###&nbsp;2.2 Authoring</p>
-<p>Try to write something in the <code>index.qmd</code> file, press Render button, and see what happens.</p>
+<p>Let’s understand what makes a minimal quarto website. These are the <strong>three most important files</strong> that you downloaded from the template repository:</p>
+<ul>
+<li><code>_quarto.yml</code> stores the meta-data for the website, such as structure, layout and other information;</li>
+<li><code>index.qmd</code> is your homepage;</li>
+<li><code>styles.scss</code> provides a customized appearance of the website.</li>
+</ul>
+<p>You’ve also downloaded <code>.gitignore</code> and a <code>LICENSE</code>. They are important, but not essential when building a website per se.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Customized R Ladies style
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Strictly speaking, you <em>do not</em> need a <code>style.css</code>/<code>style.scss</code> to build a minimal quarto website. Quarto will use a default <code>cosmo</code> style when you don’t specify anything. We’ll see how to modify the theme in a few moments.</p>
+</div>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/2_minimal_site.png" class="img-fluid figure-img" style="width:85.0%"></p>
+</figure>
+</div>
+</section>
+<section id="authoring" class="level3">
+<h3 class="anchored" data-anchor-id="authoring">2.2 Authoring</h3>
+<p>Inside the <code>index.qmd</code>, you will see some information at the top of the page. This is the <code>YAML</code> header that specifies some basic information about this document.</p>
+<p>For example, <code>toc</code> means <strong>table of content</strong>. By <code>toc: true</code> a list of sub-titles appear to the right of the page. In addition, you can specify information such as <strong>author</strong> and <strong>date</strong>.</p>
+<pre><code>---
+title: "Zero to Quarto Workshop"
+subtitle: "Build your first quarto website (or something other cool things!)"
+format: 
+  html:
+    toc: true
+    toc-depth: 2
+---</code></pre>
+<p>Below the <code>YAML</code> header, you can modify some text in <a href="https://quarto.org/docs/authoring/markdown-basics.html">markdown</a> style.</p>
 </section>
 <section id="configure-the-quarto-project" class="level3">
 <h3 class="anchored" data-anchor-id="configure-the-quarto-project">2.3 Configure the quarto project</h3>
-<p>In <code>_quarto.yml</code>, change the project configuration to use <code>docs</code> as the <code>output-dir</code>:</p>
+<p>To prepare for <a href="https://quarto.org/docs/publishing/github-pages.html">publishing the website with GitHub Pages</a>, we need to do a few things in the quarto project before pushing all the files to GitHub.</p>
+<p>In addition to GitHub Pages, there are also <a href="https://quarto.org/docs/publishing/">other ways</a> to publish the website. Feel free to explore!</p>
+<section id="output-dir" class="level4">
+<h4 class="anchored" data-anchor-id="output-dir">2.3.1 output-dir</h4>
+<p>In <code>_quarto.yml</code>, change (or double check that) the project configuration to use <code>docs</code> as the <code>output-dir</code>:</p>
 <pre><code>project:
   type: website
   output-dir: docs</code></pre>
-<p>Then add <code>.nojekyll</code> to the root of the repository. Can do this by (in <strong>terminal</strong>)</p>
+<p>What this does is that when you click <strong>render</strong>, the built website with all the HTML files will be placed and updated in the <code>docs</code> folder. This step is essential when we configure GH pages setting to deploy from <code>docs</code> folder.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Set output-dir to docs
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>In the <code>_quarto.yml</code> you downloaded from the workshop template, it already specified the <code>output-dir: doc</code>.</p>
+<p>When you build a website from scratch, by default, this is usually not the case. You’d need to add this line yourself.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="nojekyll" class="level4">
+<h4 class="anchored" data-anchor-id="nojekyll">2.3.2 nojekyll</h4>
+<p>Add <code>.nojekyll</code> to the root of the repository (i.e.&nbsp;same location where <code>_quarto.yml</code> is.</p>
+<p>You can do this by (in <em>Terminal</em>)</p>
 <pre><code>touch .nojekyll</code></pre>
-<p>Push everything to your repository.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Find <em>Terminal</em>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>If you don’t have <em>Terminal</em> panel next to <em>Console</em>, it can be opened by Tools &gt; Terminal &gt; New terminal.</p>
+<p>Alternatively, you can also use your favorite command line software to navigate to the project and add <code>.nojekyll</code> there.</p>
+</div>
+</div>
+</div>
+<p>Finally, commit all the files, and push everything to your remote repository on GitHub repository.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/3_commit.png" class="img-fluid figure-img" style="width:65.0%"></p>
+</figure>
+</div>
+</section>
 </section>
 </section>
 <section id="configure-github-pages-test-deployment" class="level2">
@@ -238,27 +391,92 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>When you are more experienced, you can add more content until you’re happy before configuring the GH pages and test the website deployment. I personally prefer to test the deployment early on to make sure it works!</p>
+<p>When you are more experienced, you can add more content until you’re happy <em>before</em> configuring the GH pages and test the website deployment. Yes, you can swap step 3 and 4 in this tutorial.</p>
+<p>I personally prefer to test the deployment early on to make sure it works!</p>
 </div>
 </div>
-<p>Go to Settings &gt; Pages, publish from <code>docs</code> of the <code>main</code> branch.</p>
-<p><img src="resources/2_config_ghp.png" class="img-fluid"></p>
-<p>Can check GitHub Action and deployment status.</p>
-<p><img src="resources/3_action.png" class="img-fluid"></p>
-<p><img src="resources/4_deploy.png" class="img-fluid"></p>
+<p>On GitHub: go to <strong>Settings &gt; Pages</strong>, publish from <code>docs</code> of the <code>main</code> branch. Save.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/3_config_ghp.png" class="img-fluid figure-img" style="width:85.0%"></p>
+</figure>
+</div>
+<p>This should take less than 1 minute. Meanwhile, you can click around and check GitHub Action and deployment status.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/3_action.png" class="img-fluid figure-img" style="width:85.0%"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/3_deploy.png" class="img-fluid figure-img" style="width:85.0%"></p>
+</figure>
+</div>
 <p>After the deployment is successful, go to <code>view deployment</code>, and a successful website should be published.</p>
+<p>A URL should appear to tell you where the website is: it usually takes the form of <code>https://your_username.github.io/your_reponame/</code></p>
+<p>It is good practice to save it on the page where your repository is located, to the top right. This way you can find it easily in the future!</p>
 </section>
 <section id="add-content" class="level2">
 <h2 class="anchored" data-anchor-id="add-content">4. Add content</h2>
-<p>Now this is a big topic. There are so many things you can change; but let’s focus on some basics first.</p>
-<section id="site-navigation" class="level3">
-<h3 class="anchored" data-anchor-id="site-navigation">Site navigation</h3>
-</section>
-<section id="add-a-new-page" class="level3">
-<h3 class="anchored" data-anchor-id="add-a-new-page">Add a new page</h3>
+<p>Now this is really where you can be creative. There are so many things you can change; but let’s focus on some basics first.</p>
+<section id="site-navigation-and-new-pages" class="level3">
+<h3 class="anchored" data-anchor-id="site-navigation-and-new-pages">Site navigation and new pages</h3>
+<p>What we have here is a very minimal one-page website. It is easy to add more pages; the question is, where to?</p>
+<p>Quarto offers a few options, and all of them can be specified in <code>_quarto.yml</code> file.</p>
+<p>This is how the navigation style of our <a href="https://andreaczhang.github.io/workshop-02quarto/">workshop webpage</a> is specified (under <code>navbar</code>). Feel free to check the source code for this YAML file <a href="https://github.com/andreaczhang/workshop-02quarto/blob/main/_quarto.yml">here</a>.</p>
+<ul>
+<li><code>left</code> and <code>right</code> specifies the location on the navigation bar, where the tabs should appear;</li>
+<li><code>href</code> is the link of the document or URL to the page. It can be a quarto document in the same directory or sub-directory, but can also be a URL for any existing webpage online;</li>
+<li><code>text</code> is what the tab is named;</li>
+<li><code>icon</code> provides the GitHub icon rather than text.</li>
+</ul>
+<pre><code>website:
+  page-navigation: true
+  title: "Zero to Quarto Workshop"
+
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+        
+      - href: setup.qmd  
+        text: Set up
+        
+      - href: tutorial.qmd
+        text: Tutorial
+        
+      - href: slides.qmd
+        text: Slides
+        
+    right: 
+      - icon: github
+        href: https://github.com/andreaczhang/workshop-02quarto</code></pre>
+<p>For more complex website such as courses or workshops, you might need other types of navigation to present information. Read more <a href="https://quarto.org/docs/websites/website-navigation.html">here</a> to find out how you can do it.</p>
 </section>
 <section id="theme" class="level3">
 <h3 class="anchored" data-anchor-id="theme">Theme</h3>
+<p>The appearance of the workshop template is inspired by the <a href="https://rladies.org">R Ladies</a> colors. If you want to use a preset provided by quarto, it is perfectly fine - they look nice and professional already.</p>
+<p>This is how you specify the theme. In <code>_quarto.yml</code>, instead of providing <code>styles.scss</code> file, use the theme name you prefer. For more themes, check <a href="https://quarto.org/docs/output-formats/html-themes.html">here</a>.</p>
+<pre><code>format:
+  html:
+    theme: cosmo</code></pre>
+<p>Alternatively, feel free to modify the <code>styles.scss</code> to test different color palettes and font styles. Go wild!</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Custom themes
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Quarto has provided some <a href="https://quarto.org/docs/output-formats/html-themes.html#custom-themes">guide</a> on how to make custom themes. However, the easiest way to get started is to find an existing style you like, and try to modify it.</p>
+</div>
+</div>
+</div>
 </section>
 <section id="code-chunks" class="level3">
 <h3 class="anchored" data-anchor-id="code-chunks">Code chunks</h3>
@@ -287,6 +505,9 @@ Tip
 </section>
 <section id="resources" class="level3">
 <h3 class="anchored" data-anchor-id="resources">Resources</h3>
+<ul>
+<li>Create website <a href="https://quarto.org/docs/websites/">guide</a> on official quarto documentation</li>
+</ul>
 
 
 </section>

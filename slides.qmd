@@ -4,9 +4,9 @@ format: html
 ---
 
 
-This could be interesting to use revealjs embedding
 
-<iframe class="slide-deck" style="width:800px; height:600px" src="https://andreaczhang.github.io/slides-02quarto/"></iframe>
+
+<iframe class="slide-deck" style="width:720px; height:540px" src="https://andreaczhang.github.io/slides-02quarto/"></iframe>
 
 ### Structure
 

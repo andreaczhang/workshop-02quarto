@@ -5,7 +5,7 @@ date: 2023-10-17
 format: 
   html:
     toc: true
-    toc-depth: 2
+    toc-depth: 3
     linestretch: 1.7
 ---
 
@@ -24,15 +24,41 @@ This tutorial outlines a minimal workflow so that you can build your own quarto 
 
 ## 1. Set up a version controlled quarto project
 
-This can be broken down into a few steps:
+There are a few ways to do this. 
 
-### 1.1 Create a new public repository
+* **Option 1 is recommended for the workshop today**; it contains a minimal website page with customized color palette;
+* Option 2 is for those who are familiar with linking GitHub with RStudio, and want to create their own quarto project. Feel free to explore!
 
-It has to be public.
 
-### 1.2 Link your R project to the repository
+### Option 1: clone the workshop template repository
 
-Open 
+Go to the [template-02quarto repository](https://github.com/andreaczhang/template-02quarto)
+
+![](resources/0_clone_template.png){width=85% fig-align="center"}
+
+
+Clone the repository by clicking on `Code`, copy the link
+
+In RStudio, open a new project, choose version control
+
+![](resources/1_vc_project_git.png){width=65% fig-align="center"}
+
+Paste the link, and enter a name for your project. Create. This step copies content to your local machine, and inside your Rstudio you should see a tab named Git.
+
+![](resources/1_vc_project_clone.png){width=65% fig-align="center"}
+
+
+
+### Option 2: create your own public repository
+
+This option is for those who are familiar with using GitHub and version controlled R project, and want to make a quarto website from scratch. (You are welcome to copy the files directly from the template repo into your own)
+
+* Create a new **public** repository
+* Clone the repository by clicking on the `Code` 
+* Open a new project in Rstudio, choose version control
+* Paste link, name your repo.
+
+This will create an empty version controlled Rproject. After this, you can choose to download the files from the template repository directly; or create your own quarto files. (We do not cover this today)
 
 
 ::: {.callout-tip collapse="true"}
@@ -45,17 +71,77 @@ You can try to modify the `README.md` locally, then commit and push to remote (o
 
 ## 2. Build the project
 
+Now you see a few files that have been downloaded in the folder where you `Rproject` is located. Before going into more details, let's build your first webpage to see what happens!
+
+Locate `index.qmd`, open it.
+
+![](resources/2_index_1.png){width=65% fig-align="center"}
+
+You should have a button **render** when you open the `index.qmd` file. Click on **render**. Do you see an HTML page in the *Viewer* panel?
+
+If you do, that's great! We're ready for the next step!
+
+![](resources/2_index_2.png){width=75% fig-align="center"}
+
+
+
 ### 2.1 Structure of a new quarto project
 
+Let's understand what makes a minimal quarto website. These are the **three most important files** that you downloaded from the template repository: 
 
-### 2.2 Authoring
+* `_quarto.yml` stores the meta-data for the website, such as structure, layout and other information;
+* `index.qmd` is your homepage;
+* `styles.scss` provides a customized appearance of the website. 
 
-Try to write something in the `index.qmd` file, press Render button, and see what happens.
+You've also downloaded `.gitignore` and a `LICENSE`. They are important, but not essential when building a website per se. 
+
+
+::: {.callout-tip collapse="true"}
+
+## Customized R Ladies style
+
+Strictly speaking, you *do not* need a `style.css`/`style.scss` to build a minimal quarto website. Quarto will use a default `cosmo` style when you don't specify anything. We'll see how to modify the theme in a few moments.
+
+:::
+
+![](resources/2_minimal_site.png){width=85% fig-align="center"}
+
+
+
+
+
+### 2.2 Authoring
+
+Inside the `index.qmd`, you will see some information at the top of the page. This is the `YAML` header that specifies some basic information about this document. 
+
+For example, `toc` means **table of content**. By `toc: true` a list of sub-titles appear to the right of the page. In addition, you can specify information such as **author** and **date**.
+
+```
+---
+title: "Zero to Quarto Workshop"
+subtitle: "Build your first quarto website (or something other cool things!)"
+format: 
+  html:
+    toc: true
+    toc-depth: 2
+---
+```
+
+Below the `YAML` header, you can modify some text in [markdown](https://quarto.org/docs/authoring/markdown-basics.html) style. 
+
 
 
 ### 2.3 Configure the quarto project
 
-In `_quarto.yml`, change the project configuration to use `docs` as the `output-dir`: 
+To prepare for [publishing the website with GitHub Pages](https://quarto.org/docs/publishing/github-pages.html), we need to do a few things in the quarto project before pushing all the files to GitHub.
+
+In addition to GitHub Pages, there are also [other ways](https://quarto.org/docs/publishing/) to publish the website. Feel free to explore!
+
+
+
+#### 2.3.1 output-dir
+
+In `_quarto.yml`, change (or double check that) the project configuration to use `docs` as the `output-dir`: 
 
 ```
 project:
@@ -63,53 +149,138 @@ project:
   output-dir: docs
 ```
 
-Then add `.nojekyll` to the root of the repository. Can do this by (in **terminal**)
+What this does is that when you click **render**, the built website with all the HTML files will be placed and updated in the `docs` folder. This step is essential when we configure GH pages setting to deploy from `docs` folder.
+
+::: {.callout-tip collapse="true"}
+
+## Set output-dir to docs
+
+In the `_quarto.yml` you downloaded from the workshop template, it already specified the `output-dir: doc`. 
+
+When you build a website from scratch, by default, this is usually not the case. You'd need to add this line yourself. 
+
+:::
+
+#### 2.3.2 nojekyll
+
+Add `.nojekyll` to the root of the repository (i.e. same location where `_quarto.yml` is. 
+
+You can do this by (in *Terminal*)
 
 ```
 touch .nojekyll
 ```
 
-Push everything to your repository.
+::: {.callout-tip collapse="true"}
+## Find *Terminal* 
 
+If you don't have *Terminal* panel next to *Console*, it can be opened by Tools > Terminal > New terminal.
 
+Alternatively, you can also use your favorite command line software to navigate to the project and add `.nojekyll` there.
+
+:::
+
+Finally, commit all the files, and push everything to your remote repository on GitHub repository.
+
+![](resources/3_commit.png){width=65% fig-align="center"}
 
 ## 3. Configure GitHub pages, test deployment
 
 ::: {.callout-tip}
 
-When you are more experienced, you can add more content until you're happy before configuring the GH pages and test the website deployment. I personally prefer to test the deployment early on to make sure it works!
+When you are more experienced, you can add more content until you're happy *before* configuring the GH pages and test the website deployment. Yes, you can swap step 3 and 4 in this tutorial.
+
+I personally prefer to test the deployment early on to make sure it works!
 
 :::
 
 
-Go to Settings > Pages, publish from `docs` of the `main` branch.
+On GitHub: go to **Settings > Pages**, publish from `docs` of the `main` branch. Save.
 
-![](resources/2_config_ghp.png)
+![](resources/3_config_ghp.png){width=85% fig-align="center"}
 
 
-Can check GitHub Action and deployment status. 
+This should take less than 1 minute. Meanwhile, you can click around and check GitHub Action and deployment status. 
 
-![](resources/3_action.png)
+![](resources/3_action.png){width=85% fig-align="center"}
 
-![](resources/4_deploy.png)
+![](resources/3_deploy.png){width=85% fig-align="center"}
 
 After the deployment is successful, go to `view deployment`, and a successful website should be published. 
+
+A URL should appear to tell you where the website is: it usually takes the form of `https://your_username.github.io/your_reponame/`
+
+It is good practice to save it on the page where your repository is located, to the top right. This way you can find it easily in the future!
+
 
 
 
 ## 4. Add content
 
-Now this is a big topic. There are so many things you can change; but let's focus on some basics first.
+Now this is really where you can be creative. There are so many things you can change; but let's focus on some basics first.
 
-### Site navigation
+### Site navigation and new pages
 
+What we have here is a very minimal one-page website. It is easy to add more pages; the question is, where to?
 
-### Add a new page
+Quarto offers a few options, and all of them can be specified in `_quarto.yml` file. 
+
+This is how the navigation style of our [workshop webpage](https://andreaczhang.github.io/workshop-02quarto/) is specified (under `navbar`). Feel free to check the source code for this YAML file [here](https://github.com/andreaczhang/workshop-02quarto/blob/main/_quarto.yml).
+
+* `left` and `right` specifies the location on the navigation bar, where the tabs should appear;
+* `href` is the link of the document or URL to the page. It can be a quarto document in the same directory or sub-directory, but can also be a URL for any existing webpage online;
+* `text` is what the tab is named;
+* `icon` provides the GitHub icon rather than text.
+
+```
+website:
+  page-navigation: true
+  title: "Zero to Quarto Workshop"
+
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+        
+      - href: setup.qmd  
+        text: Set up
+        
+      - href: tutorial.qmd
+        text: Tutorial
+        
+      - href: slides.qmd
+        text: Slides
+        
+    right: 
+      - icon: github
+        href: https://github.com/andreaczhang/workshop-02quarto
+```
+
+For more complex website such as courses or workshops, you might need other types of navigation to present information. Read more [here](https://quarto.org/docs/websites/website-navigation.html) to find out how you can do it.
+
 
 
 ### Theme
 
+The appearance of the workshop template is inspired by the [R Ladies](https://rladies.org) colors. If you want to use a preset provided by quarto, it is perfectly fine - they look nice and professional already. 
 
+This is how you specify the theme. In `_quarto.yml`, instead of providing `styles.scss` file, use the theme name you prefer. For more themes, check [here](https://quarto.org/docs/output-formats/html-themes.html). 
+
+```
+format:
+  html:
+    theme: cosmo
+```
+
+
+Alternatively, feel free to modify the `styles.scss` to test different color palettes and font styles. Go wild!
+
+
+:::{.callout-tip collapse="true"}
+## Custom themes
+
+Quarto has provided some [guide](https://quarto.org/docs/output-formats/html-themes.html#custom-themes) on how to make custom themes. However, the easiest way to get started is to find an existing style you like, and try to modify it.
+:::
 
 ### Code chunks
 
@@ -147,6 +318,9 @@ Books
 
 
 ### Resources
+
+* Create website [guide](https://quarto.org/docs/websites/) on official quarto documentation
+
 
 
 

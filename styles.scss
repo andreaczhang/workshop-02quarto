@@ -1,7 +1,9 @@
 /*-- scss:defaults --*/
 $theme-black: #4c4c4c;
 $theme-white: white;
-$theme-grey: #e9ecef;
+$theme-grey: #FAFAFA;
+$theme-beige: #FFFEF2;
+$theme-purple0: #FFF0F5;
 $theme-purple1: #E6E6FA;
 $theme-purple2: #CBC3E3;
 $theme-purple3: #88398A;
@@ -16,13 +18,13 @@ $link-color: $theme-purple4;
 
 // code
 $code-color: #88398A;
-$code-bg: $theme-purple1;
+$code-bg: $theme-grey;
 $code-block-bg-alpha: -0.5;
 $code-block-border-left: TRUE;
 $code-block-border-left-style: solid;
 
 // navigation
-$navbar-bg: $theme-purple4;
+$navbar-bg: $theme-purple3;
 
 // callout block
 $callout-color-note: $theme-purple3;
@@ -65,8 +67,15 @@ h2 {
   padding: 0.3em;
 }
 
-h3, h4 {
+h3 {
   color: $theme-purple4;
+  font-family: $font-signika-negative;
+  padding: 0.3em;
+}
+
+
+h4 {
+  color: $theme-purple5;
   font-family: $font-signika-negative;
   padding: 0.3em;
 }
