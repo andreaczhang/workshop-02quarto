@@ -1,6 +1,6 @@
 ---
 title: "Zero to Quarto Workshop"
-subtitle: "Build your first quarto website (or something other cool things!)"
+subtitle: "Build your first quarto website (or some other cool things!)"
 format: 
   html:
     toc: true
