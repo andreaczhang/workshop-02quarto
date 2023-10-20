@@ -1,25 +1,13 @@
 ---
 title: "Slides"
+author: "Chi Zhang"
+date: 2023-10-07
 format: html
 ---
 
+Access the **reveal.js slide deck** [here](https://andreaczhang.github.io/slides-02quarto/). 
 
-
+The [R ladies inspired template](https://github.com/beatrizmilz/quarto-rladies-theme) is made by [Beatriz Milz](https://github.com/beatrizmilz) and [Mickael Canouil](https://github.com/mcanouil). 
 
 <iframe class="slide-deck" style="width:720px; height:540px" src="https://andreaczhang.github.io/slides-02quarto/"></iframe>
 
-### Structure
-
-
-
-|     Page       |           Topic                |
-|:----------------:|:------------------------------:|
-|  1-x   |  Introduction |
-|     | Start a new project  |
-|     | Build a minimal website and render |
-|     | Add content: `about` page |
-|     | Deploy to GitHub |
-|     | Add content: a new page with R code and data |
-|     | Add content: image  |
-
-Advanced content will be given links, left for free exploration!

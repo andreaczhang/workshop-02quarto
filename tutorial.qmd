@@ -16,8 +16,8 @@ This tutorial outlines a minimal workflow so that you can build your own quarto 
 ## This workflow requires:
 
 * GitHub account to set up a public repository
-* Rstudio (version xxx)
-* Quarto (version xxx)
+* RStudio (after 2022)
+* Quarto (download [here](https://quarto.org/docs/get-started/))
 
 :::
 
@@ -282,22 +282,66 @@ Alternatively, feel free to modify the `styles.scss` to test different color pal
 Quarto has provided some [guide](https://quarto.org/docs/output-formats/html-themes.html#custom-themes) on how to make custom themes. However, the easiest way to get started is to find an existing style you like, and try to modify it.
 :::
 
+
+
+
+### Figures and tables
+
+It is straightforward to include images in the website. One way to include a local figure in an article (such as blogpost) goes like this:
+
+```
+![caption](path_to_figure.png) {width=85% fig-align="center"}
+```
+
+To make a simple table, you can directly enter the table in the quarto document: 
+
+```
+| Default | Left | Right | Center |
+|---------|:-----|------:|:------:|
+| 12      | 12   |    12 |   12   |
+| 123     | 123  |   123 |  123   |
+
+: Table name
+```
+
+| Default | Left | Right | Center |
+|---------|:-----|------:|:------:|
+| 12      | 12   |    12 |   12   |
+| 123     | 123  |   123 |  123   |
+
+: Table name
+
+
+Read about how to work on [figures](https://quarto.org/docs/authoring/figures.html) and [tables](https://quarto.org/docs/authoring/tables.html).
+
+
 ### Code chunks
 
+Use a code fence (3 backticks) with the language you wish to run the code: 
 
-### Images
+![](resources/4_rcode.png){width=65% fig-align="center"}
+
+```{r}
+#| label: fig-airquality
+#| fig-cap: "Temperature and ozone level."
+#| warning: false
+
+library(ggplot2)
+ggplot(airquality, aes(Temp, Ozone)) + 
+  geom_point() + 
+  geom_smooth(method = "loess")
+```
+
+Depending on your needs, you may want to hide the code and/or not execute the code. Learn how to work on code in [this chapter](https://quarto.org/docs/computations/r.html) of the quarto doc.
 
 
-### More on quarto websites 
-
-Use list
 
 
+### (Optional) Add interactivity 
 
+The latest quarto version and extension supports running R scripts interactively from a web-browser: i.e. no local execution of the R code. 
 
-## (Optional) Add interactivity 
-
-This is a topic of using quarto extension.
+I have a blogpost on this topic, [read here](https://andreaczhang.github.io/blog/technotes_20231001_qt_webr/). However, be aware that this technology is yet to be improved, so what you know today about `webr` might not work next month... 
 
 
 
@@ -305,31 +349,22 @@ This is a topic of using quarto extension.
 
 ### Workflow
 
+Today we went through 4 steps: 
 
+* set a version controlled quarto project
+* build the project locally, configure necessary parts (`output-dir` and `.nojekyll`)
+* push to GitHub, configure GH pages setting
+* add more content
 
-
-
-### Other quarto projects
-
-Presentation
-
-Books
+It takes a few try to make a website that you need. But this is a good start! One day you will make your own portfolio, or a course website that truly belongs to you! 
 
 
 
 ### Resources
 
-* Create website [guide](https://quarto.org/docs/websites/) on official quarto documentation
+[Quarto Gallery](https://quarto.org/docs/gallery/) shows a nice and inspiring collection of the types of projects you can create. Make sure you check them out!
 
-
-
-
-
-
-
-
-
-
-
+* Create [website](https://quarto.org/docs/websites/) on official quarto documentation
+* Create [book](https://quarto.org/docs/books/), [presentation](https://quarto.org/docs/presentations/) 
 
 

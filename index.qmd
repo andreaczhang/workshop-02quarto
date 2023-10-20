@@ -8,9 +8,9 @@ format:
     linestretch: 1.7
 ---
 
-Date: Monday 23 October 2023, 6:30PM to 8:00PM, CEST 
+Date: **Monday 23 October 2023, 6:30PM to 8:00PM, CEST** 
 
-Place: KO2-F-153, Rämistrasse 71, Zürich.
+Place: **KO2-F-153, Rämistrasse 71, Zürich**
 
 [Event link](https://www.meetup.com/rladies-zurich/events/296330423/)
 

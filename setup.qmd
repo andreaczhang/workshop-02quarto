@@ -6,31 +6,30 @@ format:
   html:
     toc: true
     toc-depth: 3
-    linestretch: 1.7
 ---
 
 Here are a few things you need to build and deploy a quarto website (or project) with GitHub Pages.
 
-### R, Rstudio 
+### Rstudio 
 
-1. Check your R version and Rstudio version. 
-
-<span style='color:tomato'>how to check version</span>
+Your Rstudio should be downloaded **later than 2022** for quarto to run. However, it would be good to update it to have the latest features!
 
 
 ### GitHub
 
 1. Set up a free account at [GitHub](https://github.com) if you do not have an account yet.
-2. Configure, and link with Rstudio.
+2. Configure git on your machine so that you can use it in Rstudio.
 
-<span style='color:tomato'>Some might need help at this stage</span>
+Learn how to do this
+
+* [Reproducible Research Workshop](https://www.geo.uzh.ch/microsite/reproducible_research/post/rr-rstudio-git/) by UZH
 
 
 ### Quarto
 
-Download and install 
+Download the latest version (1.3) of Quarto [here](https://quarto.org/docs/get-started/).
 
-<span style='color:tomato'>how to check version</span>
+You might need to re-start Rstudio.
 
-<span style='color:tomato'>where to download, how to know if it's successful</span>
+{{< video https://youtu.be/_f3latmOhew >}}
 

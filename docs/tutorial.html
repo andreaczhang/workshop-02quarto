@@ -22,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -137,15 +171,13 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#site-navigation-and-new-pages" id="toc-site-navigation-and-new-pages" class="nav-link" data-scroll-target="#site-navigation-and-new-pages">Site navigation and new pages</a></li>
   <li><a href="#theme" id="toc-theme" class="nav-link" data-scroll-target="#theme">Theme</a></li>
+  <li><a href="#figures-and-tables" id="toc-figures-and-tables" class="nav-link" data-scroll-target="#figures-and-tables">Figures and tables</a></li>
   <li><a href="#code-chunks" id="toc-code-chunks" class="nav-link" data-scroll-target="#code-chunks">Code chunks</a></li>
-  <li><a href="#images" id="toc-images" class="nav-link" data-scroll-target="#images">Images</a></li>
-  <li><a href="#more-on-quarto-websites" id="toc-more-on-quarto-websites" class="nav-link" data-scroll-target="#more-on-quarto-websites">More on quarto websites</a></li>
-  </ul></li>
   <li><a href="#optional-add-interactivity" id="toc-optional-add-interactivity" class="nav-link" data-scroll-target="#optional-add-interactivity">(Optional) Add interactivity</a></li>
+  </ul></li>
   <li><a href="#summary-and-resources" id="toc-summary-and-resources" class="nav-link" data-scroll-target="#summary-and-resources">Summary and resources</a>
   <ul class="collapse">
   <li><a href="#workflow" id="toc-workflow" class="nav-link" data-scroll-target="#workflow">Workflow</a></li>
-  <li><a href="#other-quarto-projects" id="toc-other-quarto-projects" class="nav-link" data-scroll-target="#other-quarto-projects">Other quarto projects</a></li>
   <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
   </ul></li>
   </ul>
@@ -196,8 +228,8 @@ This workflow requires:
 <div class="callout-body-container callout-body">
 <ul>
 <li>GitHub account to set up a public repository</li>
-<li>Rstudio (version xxx)</li>
-<li>Quarto (version xxx)</li>
+<li>RStudio (after 2022)</li>
+<li>Quarto (download <a href="https://quarto.org/docs/get-started/">here</a>)</li>
 </ul>
 </div>
 </div>
@@ -478,35 +510,93 @@ Custom themes
 </div>
 </div>
 </section>
+<section id="figures-and-tables" class="level3">
+<h3 class="anchored" data-anchor-id="figures-and-tables">Figures and tables</h3>
+<p>It is straightforward to include images in the website. One way to include a local figure in an article (such as blogpost) goes like this:</p>
+<pre><code>![caption](path_to_figure.png) {width=85% fig-align="center"}</code></pre>
+<p>To make a simple table, you can directly enter the table in the quarto document:</p>
+<pre><code>| Default | Left | Right | Center |
+|---------|:-----|------:|:------:|
+| 12      | 12   |    12 |   12   |
+| 123     | 123  |   123 |  123   |
+
+: Table name</code></pre>
+<table class="table">
+<caption>Table name</caption>
+<thead>
+<tr class="header">
+<th>Default</th>
+<th style="text-align: left;">Left</th>
+<th style="text-align: right;">Right</th>
+<th style="text-align: center;">Center</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>12</td>
+<td style="text-align: left;">12</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: center;">12</td>
+</tr>
+<tr class="even">
+<td>123</td>
+<td style="text-align: left;">123</td>
+<td style="text-align: right;">123</td>
+<td style="text-align: center;">123</td>
+</tr>
+</tbody>
+</table>
+<p>Read about how to work on <a href="https://quarto.org/docs/authoring/figures.html">figures</a> and <a href="https://quarto.org/docs/authoring/tables.html">tables</a>.</p>
+</section>
 <section id="code-chunks" class="level3">
 <h3 class="anchored" data-anchor-id="code-chunks">Code chunks</h3>
+<p>Use a code fence (3 backticks) with the language you wish to run the code:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/4_rcode.png" class="img-fluid figure-img" style="width:65.0%"></p>
+</figure>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(airquality, <span class="fu">aes</span>(Temp, Ozone)) <span class="sc">+</span> </span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"loess"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-airquality" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="tutorial_files/figure-html/fig-airquality-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Figure&nbsp;1: Temperature and ozone level.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Depending on your needs, you may want to hide the code and/or not execute the code. Learn how to work on code in <a href="https://quarto.org/docs/computations/r.html">this chapter</a> of the quarto doc.</p>
 </section>
-<section id="images" class="level3">
-<h3 class="anchored" data-anchor-id="images">Images</h3>
+<section id="optional-add-interactivity" class="level3">
+<h3 class="anchored" data-anchor-id="optional-add-interactivity">(Optional) Add interactivity</h3>
+<p>The latest quarto version and extension supports running R scripts interactively from a web-browser: i.e.&nbsp;no local execution of the R code.</p>
+<p>I have a blogpost on this topic, <a href="https://andreaczhang.github.io/blog/technotes_20231001_qt_webr/">read here</a>. However, be aware that this technology is yet to be improved, so what you know today about <code>webr</code> might not work next month…</p>
 </section>
-<section id="more-on-quarto-websites" class="level3">
-<h3 class="anchored" data-anchor-id="more-on-quarto-websites">More on quarto websites</h3>
-<p>Use list</p>
-</section>
-</section>
-<section id="optional-add-interactivity" class="level2">
-<h2 class="anchored" data-anchor-id="optional-add-interactivity">(Optional) Add interactivity</h2>
-<p>This is a topic of using quarto extension.</p>
 </section>
 <section id="summary-and-resources" class="level1">
 <h1>Summary and resources</h1>
 <section id="workflow" class="level3">
 <h3 class="anchored" data-anchor-id="workflow">Workflow</h3>
-</section>
-<section id="other-quarto-projects" class="level3">
-<h3 class="anchored" data-anchor-id="other-quarto-projects">Other quarto projects</h3>
-<p>Presentation</p>
-<p>Books</p>
+<p>Today we went through 4 steps:</p>
+<ul>
+<li>set a version controlled quarto project</li>
+<li>build the project locally, configure necessary parts (<code>output-dir</code> and <code>.nojekyll</code>)</li>
+<li>push to GitHub, configure GH pages setting</li>
+<li>add more content</li>
+</ul>
+<p>It takes a few try to make a website that you need. But this is a good start! One day you will make your own portfolio, or a course website that truly belongs to you!</p>
 </section>
 <section id="resources" class="level3">
 <h3 class="anchored" data-anchor-id="resources">Resources</h3>
+<p><a href="https://quarto.org/docs/gallery/">Quarto Gallery</a> shows a nice and inspiring collection of the types of projects you can create. Make sure you check them out!</p>
 <ul>
-<li>Create website <a href="https://quarto.org/docs/websites/">guide</a> on official quarto documentation</li>
+<li>Create <a href="https://quarto.org/docs/websites/">website</a> on official quarto documentation</li>
+<li>Create <a href="https://quarto.org/docs/books/">book</a>, <a href="https://quarto.org/docs/presentations/">presentation</a></li>
 </ul>
 
 
