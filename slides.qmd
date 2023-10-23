@@ -7,7 +7,6 @@ format: html
 
 Access the **reveal.js slide deck** [here](https://andreaczhang.github.io/slides-02quarto/). 
 
-The [R ladies inspired template](https://github.com/beatrizmilz/quarto-rladies-theme) is made by [Beatriz Milz](https://github.com/beatrizmilz) and [Mickael Canouil](https://github.com/mcanouil). 
-
 <iframe class="slide-deck" style="width:720px; height:540px" src="https://andreaczhang.github.io/slides-02quarto/"></iframe>
 
+The [R ladies inspired template](https://github.com/beatrizmilz/quarto-rladies-theme) is made by [Beatriz Milz](https://github.com/beatrizmilz) and [Mickael Canouil](https://github.com/mcanouil). 

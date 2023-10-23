@@ -16,8 +16,23 @@ This tutorial outlines a minimal workflow so that you can build your own quarto 
 ## This workflow requires:
 
 * GitHub account to set up a public repository
-* RStudio (after 2022)
+* RStudio (after 2022, better after 2023)
 * Quarto (download [here](https://quarto.org/docs/get-started/))
+
+:::
+
+
+::: callout-note
+
+## Workshop material
+
+You can find the workshop material from the GitHub repository of [R-Ladies Zürich](https://github.com/rladies-zurich).
+
+* Workshop [website](https://andreaczhang.github.io/workshop-02quarto/) and  [repo](https://github.com/rladies-zurich/workshop-02quarto)
+* Workshop reveal.js slides [link](https://andreaczhang.github.io/slides-02quarto/)
+* Quarto website template [template-02quarto](https://github.com/rladies-zurich/template-02quarto) for you to download and modify
+
+The source repository and slides can be found in Chi's personal GitHub repositories.
 
 :::
 
@@ -32,14 +47,14 @@ There are a few ways to do this.
 
 ### Option 1: clone the workshop template repository
 
-Go to the [template-02quarto repository](https://github.com/andreaczhang/template-02quarto)
+Go to the [template-02quarto repository](https://github.com/rladies-zurich/template-02quarto) available on R-Ladies Zurich repository.
 
 ![](resources/0_clone_template.png){width=85% fig-align="center"}
 
 
-Clone the repository by clicking on `Code`, copy the link
+Clone the repository by clicking on **Code**, copy the link;
 
-In RStudio, open a new project, choose version control
+In RStudio, **create a new project**, choose **Version Control**:
 
 ![](resources/1_vc_project_git.png){width=65% fig-align="center"}
 
@@ -51,15 +66,14 @@ Paste the link, and enter a name for your project. Create. This step copies cont
 
 ### Option 2: create your own public repository
 
-This option is for those who are familiar with using GitHub and version controlled R project, and want to make a quarto website from scratch. (You are welcome to copy the files directly from the template repo into your own)
+This option is for those who are familiar with using GitHub and version controlled R project, and want to make a quarto website from scratch. (You are welcome to download the files directly from the template repo into your own!)
 
 * Create a new **public** repository
-* Clone the repository by clicking on the `Code` 
+* Clone the repository to your local machine 
 * Open a new project in Rstudio, choose version control
 * Paste link, name your repo.
 
-This will create an empty version controlled Rproject. After this, you can choose to download the files from the template repository directly; or create your own quarto files. (We do not cover this today)
-
+This will create an empty version controlled Rproject. After this, you can choose to download the files from the template repository directly; or create your own quarto files. 
 
 ::: {.callout-tip collapse="true"}
 
@@ -114,7 +128,9 @@ Strictly speaking, you *do not* need a `style.css`/`style.scss` to build a minim
 
 Inside the `index.qmd`, you will see some information at the top of the page. This is the `YAML` header that specifies some basic information about this document. 
 
-For example, `toc` means **table of content**. By `toc: true` a list of sub-titles appear to the right of the page. In addition, you can specify information such as **author** and **date**.
+For example, `toc` means **table of content**. By `toc: true` a list of sub-titles appear to the right of the page. 
+
+In addition, you can specify information such as **author** and **date**.
 
 ```
 ---
@@ -163,7 +179,7 @@ When you build a website from scratch, by default, this is usually not the case.
 
 #### 2.3.2 nojekyll
 
-Add `.nojekyll` to the root of the repository (i.e. same location where `_quarto.yml` is. 
+Add `.nojekyll` to the root of the repository: it is same location where `_quarto.yml` is. 
 
 You can do this by (in *Terminal*)
 
@@ -195,7 +211,7 @@ I personally prefer to test the deployment early on to make sure it works!
 :::
 
 
-On GitHub: go to **Settings > Pages**, publish from `docs` of the `main` branch. Save.
+On GitHub: go to **Settings > Pages > Build and deployment**, publish from `docs` of the `main` branch. Save.
 
 ![](resources/3_config_ghp.png){width=85% fig-align="center"}
 
@@ -256,7 +272,7 @@ website:
         href: https://github.com/andreaczhang/workshop-02quarto
 ```
 
-For more complex website such as courses or workshops, you might need other types of navigation to present information. Read more [here](https://quarto.org/docs/websites/website-navigation.html) to find out how you can do it.
+For more complex website such as courses or workshops, you might need **other types of navigation** to present information. Read more [here](https://quarto.org/docs/websites/website-navigation.html) to find out how you can do it.
 
 
 
@@ -264,7 +280,9 @@ For more complex website such as courses or workshops, you might need other type
 
 The appearance of the workshop template is inspired by the [R Ladies](https://rladies.org) colors. If you want to use a preset provided by quarto, it is perfectly fine - they look nice and professional already. 
 
-This is how you specify the theme. In `_quarto.yml`, instead of providing `styles.scss` file, use the theme name you prefer. For more themes, check [here](https://quarto.org/docs/output-formats/html-themes.html). 
+To modify themes, in `_quarto.yml`, instead of providing `styles.scss` file, use the theme name you prefer: `cosmo`, `zephyr` are good places to start. 
+
+For more themes, check [here](https://quarto.org/docs/output-formats/html-themes.html). 
 
 ```
 format:

@@ -228,9 +228,28 @@ This workflow requires:
 <div class="callout-body-container callout-body">
 <ul>
 <li>GitHub account to set up a public repository</li>
-<li>RStudio (after 2022)</li>
+<li>RStudio (after 2022, better after 2023)</li>
 <li>Quarto (download <a href="https://quarto.org/docs/get-started/">here</a>)</li>
 </ul>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Workshop material
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You can find the workshop material from the GitHub repository of <a href="https://github.com/rladies-zurich">R-Ladies Zürich</a>.</p>
+<ul>
+<li>Workshop <a href="https://andreaczhang.github.io/workshop-02quarto/">website</a> and <a href="https://github.com/rladies-zurich/workshop-02quarto">repo</a></li>
+<li>Workshop reveal.js slides <a href="https://andreaczhang.github.io/slides-02quarto/">link</a></li>
+<li>Quarto website template <a href="https://github.com/rladies-zurich/template-02quarto">template-02quarto</a> for you to download and modify</li>
+</ul>
+<p>The source repository and slides can be found in Chi’s personal GitHub repositories.</p>
 </div>
 </div>
 <section id="set-up-a-version-controlled-quarto-project" class="level2">
@@ -242,14 +261,14 @@ This workflow requires:
 </ul>
 <section id="option-1-clone-the-workshop-template-repository" class="level3">
 <h3 class="anchored" data-anchor-id="option-1-clone-the-workshop-template-repository">Option 1: clone the workshop template repository</h3>
-<p>Go to the <a href="https://github.com/andreaczhang/template-02quarto">template-02quarto repository</a></p>
+<p>Go to the <a href="https://github.com/rladies-zurich/template-02quarto">template-02quarto repository</a> available on R-Ladies Zurich repository.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="resources/0_clone_template.png" class="img-fluid figure-img" style="width:85.0%"></p>
 </figure>
 </div>
-<p>Clone the repository by clicking on <code>Code</code>, copy the link</p>
-<p>In RStudio, open a new project, choose version control</p>
+<p>Clone the repository by clicking on <strong>Code</strong>, copy the link;</p>
+<p>In RStudio, <strong>create a new project</strong>, choose <strong>Version Control</strong>:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="resources/1_vc_project_git.png" class="img-fluid figure-img" style="width:65.0%"></p>
@@ -264,16 +283,16 @@ This workflow requires:
 </section>
 <section id="option-2-create-your-own-public-repository" class="level3">
 <h3 class="anchored" data-anchor-id="option-2-create-your-own-public-repository">Option 2: create your own public repository</h3>
-<p>This option is for those who are familiar with using GitHub and version controlled R project, and want to make a quarto website from scratch. (You are welcome to copy the files directly from the template repo into your own)</p>
+<p>This option is for those who are familiar with using GitHub and version controlled R project, and want to make a quarto website from scratch. (You are welcome to download the files directly from the template repo into your own!)</p>
 <ul>
 <li>Create a new <strong>public</strong> repository</li>
-<li>Clone the repository by clicking on the <code>Code</code></li>
+<li>Clone the repository to your local machine</li>
 <li>Open a new project in Rstudio, choose version control</li>
 <li>Paste link, name your repo.</li>
 </ul>
-<p>This will create an empty version controlled Rproject. After this, you can choose to download the files from the template repository directly; or create your own quarto files. (We do not cover this today)</p>
+<p>This will create an empty version controlled Rproject. After this, you can choose to download the files from the template repository directly; or create your own quarto files.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -282,7 +301,7 @@ How do you know the repository is correctly set up?
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>You can try to modify the <code>README.md</code> locally, then commit and push to remote (online repository). Refresh the webpage, if you see the remote repository is synced, that means the version control works fine.</p>
 </div>
@@ -316,7 +335,7 @@ How do you know the repository is correctly set up?
 </ul>
 <p>You’ve also downloaded <code>.gitignore</code> and a <code>LICENSE</code>. They are important, but not essential when building a website per se.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -325,7 +344,7 @@ Customized R Ladies style
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Strictly speaking, you <em>do not</em> need a <code>style.css</code>/<code>style.scss</code> to build a minimal quarto website. Quarto will use a default <code>cosmo</code> style when you don’t specify anything. We’ll see how to modify the theme in a few moments.</p>
 </div>
@@ -340,7 +359,8 @@ Customized R Ladies style
 <section id="authoring" class="level3">
 <h3 class="anchored" data-anchor-id="authoring">2.2 Authoring</h3>
 <p>Inside the <code>index.qmd</code>, you will see some information at the top of the page. This is the <code>YAML</code> header that specifies some basic information about this document.</p>
-<p>For example, <code>toc</code> means <strong>table of content</strong>. By <code>toc: true</code> a list of sub-titles appear to the right of the page. In addition, you can specify information such as <strong>author</strong> and <strong>date</strong>.</p>
+<p>For example, <code>toc</code> means <strong>table of content</strong>. By <code>toc: true</code> a list of sub-titles appear to the right of the page.</p>
+<p>In addition, you can specify information such as <strong>author</strong> and <strong>date</strong>.</p>
 <pre><code>---
 title: "Zero to Quarto Workshop"
 subtitle: "Build your first quarto website (or something other cool things!)"
@@ -363,7 +383,7 @@ format:
   output-dir: docs</code></pre>
 <p>What this does is that when you click <strong>render</strong>, the built website with all the HTML files will be placed and updated in the <code>docs</code> folder. This step is essential when we configure GH pages setting to deploy from <code>docs</code> folder.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -372,7 +392,7 @@ Set output-dir to docs
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>In the <code>_quarto.yml</code> you downloaded from the workshop template, it already specified the <code>output-dir: doc</code>.</p>
 <p>When you build a website from scratch, by default, this is usually not the case. You’d need to add this line yourself.</p>
@@ -382,11 +402,11 @@ Set output-dir to docs
 </section>
 <section id="nojekyll" class="level4">
 <h4 class="anchored" data-anchor-id="nojekyll">2.3.2 nojekyll</h4>
-<p>Add <code>.nojekyll</code> to the root of the repository (i.e.&nbsp;same location where <code>_quarto.yml</code> is.</p>
+<p>Add <code>.nojekyll</code> to the root of the repository: it is same location where <code>_quarto.yml</code> is.</p>
 <p>You can do this by (in <em>Terminal</em>)</p>
 <pre><code>touch .nojekyll</code></pre>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -395,7 +415,7 @@ Find <em>Terminal</em>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>If you don’t have <em>Terminal</em> panel next to <em>Console</em>, it can be opened by Tools &gt; Terminal &gt; New terminal.</p>
 <p>Alternatively, you can also use your favorite command line software to navigate to the project and add <code>.nojekyll</code> there.</p>
@@ -427,7 +447,7 @@ Tip
 <p>I personally prefer to test the deployment early on to make sure it works!</p>
 </div>
 </div>
-<p>On GitHub: go to <strong>Settings &gt; Pages</strong>, publish from <code>docs</code> of the <code>main</code> branch. Save.</p>
+<p>On GitHub: go to <strong>Settings &gt; Pages &gt; Build and deployment</strong>, publish from <code>docs</code> of the <code>main</code> branch. Save.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="resources/3_config_ghp.png" class="img-fluid figure-img" style="width:85.0%"></p>
@@ -483,18 +503,19 @@ Tip
     right: 
       - icon: github
         href: https://github.com/andreaczhang/workshop-02quarto</code></pre>
-<p>For more complex website such as courses or workshops, you might need other types of navigation to present information. Read more <a href="https://quarto.org/docs/websites/website-navigation.html">here</a> to find out how you can do it.</p>
+<p>For more complex website such as courses or workshops, you might need <strong>other types of navigation</strong> to present information. Read more <a href="https://quarto.org/docs/websites/website-navigation.html">here</a> to find out how you can do it.</p>
 </section>
 <section id="theme" class="level3">
 <h3 class="anchored" data-anchor-id="theme">Theme</h3>
 <p>The appearance of the workshop template is inspired by the <a href="https://rladies.org">R Ladies</a> colors. If you want to use a preset provided by quarto, it is perfectly fine - they look nice and professional already.</p>
-<p>This is how you specify the theme. In <code>_quarto.yml</code>, instead of providing <code>styles.scss</code> file, use the theme name you prefer. For more themes, check <a href="https://quarto.org/docs/output-formats/html-themes.html">here</a>.</p>
+<p>To modify themes, in <code>_quarto.yml</code>, instead of providing <code>styles.scss</code> file, use the theme name you prefer: <code>cosmo</code>, <code>zephyr</code> are good places to start.</p>
+<p>For more themes, check <a href="https://quarto.org/docs/output-formats/html-themes.html">here</a>.</p>
 <pre><code>format:
   html:
     theme: cosmo</code></pre>
 <p>Alternatively, feel free to modify the <code>styles.scss</code> to test different color palettes and font styles. Go wild!</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -503,7 +524,7 @@ Custom themes
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Quarto has provided some <a href="https://quarto.org/docs/output-formats/html-themes.html#custom-themes">guide</a> on how to make custom themes. However, the easiest way to get started is to find an existing style you like, and try to modify it.</p>
 </div>
