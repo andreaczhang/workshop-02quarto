@@ -45,14 +45,15 @@ There are a few ways to do this.
 * Option 2 is for those who are familiar with linking GitHub with RStudio, and want to create their own quarto project. Feel free to explore!
 
 
-### Option 1: clone the workshop template repository
+### Option 1: fork and clone the workshop template repository
 
 Go to the [template-02quarto repository](https://github.com/rladies-zurich/template-02quarto) available on R-Ladies Zurich repository.
 
 ![](resources/0_clone_template.png){width=85% fig-align="center"}
 
+**Fork** the repository (so that you have your own copy). 
 
-Clone the repository by clicking on **Code**, copy the link;
+Then, clone the repository by clicking on **Code**, copy the link;
 
 In RStudio, **create a new project**, choose **Version Control**:
 
